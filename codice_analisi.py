@@ -29,7 +29,7 @@ Dopo aver ripulito il file [originario](/PFDIP2023tab_01_05_01.csv) abbiamo il f
 import pandas as pd
 
 # Caricamento del file Excel fornito
-file_path = '/content/classi_di_reddito.xlsx'
+file_path = 'data/classi_di_reddito.xlsx'
 data = pd.read_excel(file_path, sheet_name=None)
 
 # Vediamo i nomi dei fogli disponibili e mostriamo la testa di ciascun foglio
@@ -49,7 +49,7 @@ df_reddito['Numero_Clienti'] = (df_reddito['Percentuale'] / 100 * total_clients)
 # Visualizziamo il risultato
 df_reddito[['Classe', 'Percentuale', 'Numero_Clienti']]
 
-df_reddito.to_csv('reddito.csv', index=False)
+df_reddito.to_csv('data/reddito.csv', index=False)
 
 """### Analisi esplorativa e comparativa
 
@@ -226,11 +226,11 @@ df_fatturato['Fatturato_Custom_Dopo_Sconti'] = df_fatturato['Fatturato_Custom_Ad
 
 df_fatturato.head()
 
-df_fatturato.to_csv('fatturato.csv', index=False)
+df_fatturato.to_csv('data/fatturato.csv', index=False)
 
 """pip install streamlit
 
-!streamlit run app.py
+[!streamlit run app.py](https://tariffario-caf.streamlit.app/)
 
 ###Conclusioni sull'analisi
 

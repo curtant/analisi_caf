@@ -4,7 +4,7 @@ import altair as alt
 # Funzione per caricare i dati, utilizzando la cache per migliorare le prestazioni
 @st.cache_data
 def load_data():
-    path = "fatturato.csv"
+    path = "data/fatturato.csv"
     data = pd.read_csv(path)
     return data
 
